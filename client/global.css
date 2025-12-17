@@ -1,0 +1,139 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme with warm, soft birthday colors
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 45 80% 95%;
+    --foreground: 15 30% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 15 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 15 30% 25%;
+
+    --primary: 350 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 95% 75%;
+    --secondary-foreground: 15 30% 25%;
+
+    --muted: 45 50% 85%;
+    --muted-foreground: 15 20% 50%;
+
+    --accent: 320 90% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 60% 88%;
+    --input: 45 60% 90%;
+    --ring: 350 85% 65%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 45 80% 95%;
+    --sidebar-foreground: 15 30% 25%;
+    --sidebar-primary: 350 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 95% 75%;
+    --sidebar-accent-foreground: 15 30% 25%;
+    --sidebar-border: 45 60% 88%;
+    --sidebar-ring: 350 85% 65%;
+  }
+
+  .dark {
+    --background: 15 20% 15%;
+    --foreground: 45 80% 90%;
+
+    --card: 15 25% 20%;
+    --card-foreground: 45 80% 90%;
+
+    --popover: 15 25% 20%;
+    --popover-foreground: 45 80% 90%;
+
+    --primary: 350 85% 65%;
+    --primary-foreground: 15 20% 15%;
+
+    --secondary: 40 95% 75%;
+    --secondary-foreground: 15 20% 15%;
+
+    --muted: 15 20% 40%;
+    --muted-foreground: 45 50% 70%;
+
+    --accent: 320 90% 70%;
+    --accent-foreground: 15 20% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 15 25% 30%;
+    --input: 15 25% 28%;
+    --ring: 350 85% 65%;
+    --sidebar-background: 15 20% 15%;
+    --sidebar-foreground: 45 80% 90%;
+    --sidebar-primary: 350 85% 65%;
+    --sidebar-primary-foreground: 15 20% 15%;
+    --sidebar-accent: 40 95% 75%;
+    --sidebar-accent-foreground: 15 20% 15%;
+    --sidebar-border: 15 25% 30%;
+    --sidebar-ring: 350 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .font-sans {
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+
+  .gradient-rose-gold {
+    @apply bg-gradient-to-br from-pink-100 via-yellow-50 to-pink-50;
+  }
+
+  .gradient-soft {
+    @apply bg-gradient-to-br from-cream-50 via-rose-50 to-yellow-50;
+  }
+
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-pink-600 to-orange-500 bg-clip-text text-transparent;
+  }
+}
