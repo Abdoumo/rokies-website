@@ -285,7 +285,7 @@ export default function Index() {
               Made with love and best wishes for Rokaya on her special day
             </p>
             <p className="text-sm text-foreground/50 mt-2">
-              December 17th, 2024
+              December 17th, 2025
             </p>
           </div>
         </footer>
